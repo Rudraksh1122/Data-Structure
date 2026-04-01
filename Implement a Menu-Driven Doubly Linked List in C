@@ -1,0 +1,66 @@
+/*#include <stdio.h>
+            tail = newNode;
+        }
+    }
+
+    if (head == NULL) {
+        head = second;
+    } else {
+        struct Node* temp = head;
+        while (temp->next != NULL)
+            temp = temp->next;
+
+        temp->next = second;
+        second->prev = temp;
+    }
+
+    display();
+}
+
+/* Menu */
+void menu() {
+    printf("Enter operation\n");
+    printf("1: Insert\n");
+    printf("2: Delete\n");
+    printf("3: Display\n");
+    printf("4: Reverse\n");
+    printf("5: Concatenate\n");
+    printf("6: Exit\n");
+}
+
+int main() {
+    int choice, x;
+
+    while (1) {
+        menu();
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                scanf("%d", &x);
+                insert(x);
+                break;
+
+            case 2:
+                scanf("%d", &x);
+                deleteNode(x);
+                break;
+
+            case 3:
+                display();
+                break;
+
+            case 4:
+                reverse();
+                break;
+
+            case 5:
+                concatenate();
+                break;
+
+            case 6:
+                printf("Exit\n");
+                return 0;
+        }
+    }
+}
